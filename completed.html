@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Completed
+{% endblock %}
+
+{% block main %}
+<div class="section">
+
+    <h2>Completed Tasks</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Task</th>
+                    <th>Completed at</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for completed_task in completed_tasks %}
+                        
+                    <tr>
+                        <td>{{ completed_task.id }}</td>
+                        <td>{{ completed_task.task }}</td>
+                        <td>{{ completed_task.date_c }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+</div>  
+{% endblock %}

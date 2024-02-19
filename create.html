@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Create
+{% endblock %}
+
+{% block main %}
+    <form action="/create" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="task" placeholder="New Task" type="text">
+        </div>
+        <div class="form-group">
+            Date to complete by:<input name="month" placeholder="Month" type="number">
+            <input name="day" placeholder="Day" type="number">
+        </div>
+        <button class="btn btn-primary" type="submit">Create New Task</button>
+    </form>
+{% endblock %}
